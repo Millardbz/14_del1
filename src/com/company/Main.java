@@ -5,23 +5,41 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
-	// write your code here
 
-        int dice1, dice2;
+        int die1, die2, pointGen, point, lastDie1, lastDie2;
+       // int point = 40;
+        lastDie1 = 6;
+        lastDie2 = 6;
 
-    do{
+      do{
         Scanner scan = new Scanner(System.in);
         System.out.print("Roll (enter)");
         scan.nextLine();
 
-        dice1 = (int)(Math.random()*6+1);
-        dice2 = (int)(Math.random()*6+1);
+        pointGen = (int)(Math.random()*30);
+        point = pointGen;
+        die1 = (int)(Math.random()*6+1);
+        die2 = (int)(Math.random()*6+1);
 
-        System.out.println(dice1);
-        System.out.println(dice2);
+        System.out.println("Terning 1: " + die1);
+        System.out.println("Terning 2: " + die2);
+        System.out.println("point:     " + point);
+
+        if (die2 == die1) {        // To ens
+            if(point >= 40){       // Spilleren vinder hvis point >= 40
+                System.out.println("VINDER");
+
+            }
+            else if ((die1*die2*lastDie1*lastDie2 == 6*6*6*6)){ // Spilleren vinder hvis der blev slået
+                System.out.println("VINDER");                   // par 6 i sidste kast og nuværende
+
+            }
+
+        }
 
 
-        }while(dice1 != dice2);
+
+        }while(point >= 0);
 
     }
 }
