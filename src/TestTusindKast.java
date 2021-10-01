@@ -74,5 +74,9 @@ public class TestTusindKast {
             System.out.println(eleven + " elevens");
             System.out.println(twelve + " twelves");
 
+
+
+
+
         }
     }
