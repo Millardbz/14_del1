@@ -47,9 +47,11 @@ public class Main {
 
                 if(p1 >= 40) {       // Spilleren vinder hvis point >= 40
                     System.out.println("You win!");
+                    break;
                 }
                 else if(p2 >= 40){
                     System.out.println("You win!");
+                    break;
                 }
 
                 int sum = (die1 + die2);
@@ -64,7 +66,7 @@ public class Main {
                 }
             }
 
-                System.out.print("And you got a pair! Press enter to roll your dice again");
+                System.out.print("And you got a pair! Press enter to roll your dice again \n");
                 Scanner scan = new Scanner(System.in);
                 scan.nextLine();
 
