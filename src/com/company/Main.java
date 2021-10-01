@@ -22,7 +22,7 @@ public class Main {
 
             rolls++;
             Scanner scan = new Scanner(System.in);
-            System.out.print("Press enter to roll your dice");
+            System.out.print("Press enter to roll your dice \n");
             scan.nextLine();
 
             die1 = (int) (Math.random() * 6 + 1);
