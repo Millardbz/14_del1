@@ -29,9 +29,7 @@ public class Main {
             die2 = (int) (Math.random() * 6 + 1);
 
             int sum = (die1 + die2);
-            if (sum == 2) {
-                System.out.println(new StringBuilder().append("Sorry with a ").append(sum).append(" You lose all your points:(").toString());
-            } 
+
                 if (rolls % 2 == 0){
                 p2 += sum;}
                 else {
@@ -46,23 +44,24 @@ public class Main {
             }
             //hvis der er par
             else {
+                int sum = (die1 + die2);
+
+                //det her skal rettes, så point
+            if (sum == 2) {
+                System.out.println("Sorry with two ones you lose all your points:(");
+                if (rolls % 2 == 0){
+                    p2 = 0;
+                } else {
+                    p1 = 0;
+                }
+            }
+
                 System.out.println("And you got a pair! Press enter to roll your dice again");
                 Scanner scan = new Scanner(System.in);
                 String roll = scan.nextLine();
 
                 die1 = (int) (Math.random() * 6 + 1);
                 die2 = (int) (Math.random() * 6 + 1);
-
-                if(die1+die2==12){
-                   die1 = (int) (Math.random() * 6 + 1);
-                   die2 = (int) (Math.random() * 6 + 1);
-
-                   if(die1+die2==12){
-                       System.out.println("You got a pair of 6 twice in a row!! You WIN!");
-                       break;}
-               }
-
-                int sum = (die1 + die2);
 
                 if (rolls % 2 == 0){
                     p2 += sum;}
