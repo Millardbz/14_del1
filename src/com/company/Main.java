@@ -1,18 +1,18 @@
 package com.company;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
         int p1 = 0, p2 = 0;
         int rolls = 1;
         int die1 =1, die2 = 2;
 
-        while(rolls<10) {
+        //det her skal ændres
+        while(rolls<1000) {
 
+            //hvis terningerne ikke er ens
             if (die2 != die1) {
 
                 if (rolls % 2 == 0){
@@ -42,6 +42,7 @@ public class Main {
                 else{
                 System.out.println("You now have " + p1 + " points");}
             }
+            //hvis der er par
             else {
                 System.out.println("And you got a pair! Press enter to roll your dice again");
                 Scanner scan = new Scanner(System.in);
@@ -49,6 +50,15 @@ public class Main {
 
                 die1 = (int) (Math.random() * 6 + 1);
                 die2 = (int) (Math.random() * 6 + 1);
+
+                if(die1+die2==12){
+                   die1 = (int) (Math.random() * 6 + 1);
+                   die2 = (int) (Math.random() * 6 + 1);
+
+                   if(die1+die2==12){
+                       System.out.println("You got a pair of 6 twice in a row!! You WIN!");
+                       break;}
+               }
 
                 int sum = (die1 + die2);
 
