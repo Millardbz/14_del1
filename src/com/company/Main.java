@@ -4,42 +4,90 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args){
 
-        int die1, die2, pointGen, point, lastDie1, lastDie2;
-       // int point = 40;
-        lastDie1 = 6;
-        lastDie2 = 6;
+    public static void main(String[] args) {
+        int p1 = 0, p2 = 0;
+        int rolls = 1;
+        int die1 =1, die2 = 2;
 
-      do{
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Roll (enter)");
-        scan.nextLine();
+        //det her skal ændres
+        while(rolls<1000) {
 
-        pointGen = (int)(Math.random()*30);
-        point = pointGen;
-        die1 = (int)(Math.random()*6+1);
-        die2 = (int)(Math.random()*6+1);
+            //hvis terningerne ikke er ens
+            if (die2 != die1) {
 
-        System.out.println("Terning 1: " + die1);
-        System.out.println("Terning 2: " + die2);
-        System.out.println("point:     " + point);
+                if (rolls % 2 == 0){
+                System.out.println("Player 2's turn!");}
+                else {
+                System.out.println("Player 1's turn");}
 
-        if (die2 == die1) {        // To ens
+            rolls++;
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Press enter to roll your dice");
+            String roll = scan.nextLine();
+
+            die1 = (int) (Math.random() * 6 + 1);
+            die2 = (int) (Math.random() * 6 + 1);
+
+            int sum = (die1 + die2);
+
+                if (rolls % 2 == 0){
+                p2 += sum;}
+                else {
+                p1 += sum;}
+
+                System.out.println("You rolled a " + die1 + " and " + die2);
+
+                if (rolls % 2 == 0){
+                System.out.println("You now have " + p2 + " points");}
+                else{
+                System.out.println("You now have " + p1 + " points");}
+            }
+            //hvis der er par
+            else {
+              
+               
             if(point >= 40){       // Spilleren vinder hvis point >= 40
                 System.out.println("VINDER");
 
             }
-            else if ((die1*die2*lastDie1*lastDie2 == 6*6*6*6)){ // Spilleren vinder hvis der blev slået
-                System.out.println("VINDER");                   // par 6 i sidste kast og nuværende
 
+
+        
+                int sum = (die1 + die2);
+
+                //det her skal rettes, så point står som nul med det samme
+            if (sum == 2) {
+                System.out.println("Sorry with two ones you lose all your points:(");
+                if (rolls % 2 == 0){
+                    p2 = 0;
+                } else {
+                    p1 = 0;
+                }
             }
 
+                System.out.println("And you got a pair! Press enter to roll your dice again");
+                Scanner scan = new Scanner(System.in);
+                String roll = scan.nextLine();
+
+                die1 = (int) (Math.random() * 6 + 1);
+                die2 = (int) (Math.random() * 6 + 1);
+
+                if (rolls % 2 == 0){
+                    p2 += sum;}
+                else {
+                    p1 += sum;}
+
+                System.out.println("You rolled a " + die1 + " and " + die2);
+
+                if (rolls % 2 == 0){
+                    System.out.println("You now have " + p2 + " points");}
+                else{
+                    System.out.println("You now have " + p1 + " points");}
+
+
+            }
         }
-
-
-
-        }while(point >= 0);
 
     }
 }
