@@ -15,6 +15,7 @@ public class TestTusindKast {
             int ten = 0;
             int eleven = 0;
             int twelve = 0;
+            int identical = 0;
 
             int rolls = 0;
 
@@ -22,6 +23,10 @@ public class TestTusindKast {
                 rolls++;
                 die1 = (int) (Math.random() * 6 + 1);
                 die2 = (int) (Math.random() * 6 + 1);
+
+                if(die1 == die2){
+                    identical++;
+                }
 
                 if (die1 == 1) {
                     one++;}
@@ -73,6 +78,7 @@ public class TestTusindKast {
             System.out.println(ten + " tens");
             System.out.println(eleven + " elevens");
             System.out.println(twelve + " twelves");
+            System.out.println("You threw this many identical dice: " + identical);
 
         }
     }
