@@ -23,7 +23,7 @@ public class Main {
             rolls++;
             Scanner scan = new Scanner(System.in);
             System.out.println("Press enter to roll your dice");
-            String roll = scan.nextLine();
+            scan.nextLine();
 
             die1 = (int) (Math.random() * 6 + 1);
             die2 = (int) (Math.random() * 6 + 1);
@@ -44,6 +44,14 @@ public class Main {
             }
             //hvis der er par
             else {
+
+                if(p1 >= 40) {       // Spilleren vinder hvis point >= 40
+                    System.out.println("You win!");
+                }
+                else if(p2 >= 40){
+                    System.out.println("You win!");
+                }
+
                 int sum = (die1 + die2);
 
                 //det her skal rettes, så point står som nul med det samme
@@ -58,7 +66,7 @@ public class Main {
 
                 System.out.println("And you got a pair! Press enter to roll your dice again");
                 Scanner scan = new Scanner(System.in);
-                String roll = scan.nextLine();
+                scan.nextLine();
 
                 die1 = (int) (Math.random() * 6 + 1);
                 die2 = (int) (Math.random() * 6 + 1);
