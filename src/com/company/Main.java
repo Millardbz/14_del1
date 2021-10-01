@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
+
     public static void main(String[] args) {
         int p1 = 0, p2 = 0;
         int rolls = 1;
@@ -44,6 +45,15 @@ public class Main {
             }
             //hvis der er par
             else {
+              
+               
+            if(point >= 40){       // Spilleren vinder hvis point >= 40
+                System.out.println("VINDER");
+
+            }
+
+
+        
                 int sum = (die1 + die2);
 
                 //det her skal rettes, så point står som nul med det samme
