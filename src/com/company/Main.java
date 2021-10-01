@@ -29,7 +29,9 @@ public class Main {
             die2 = (int) (Math.random() * 6 + 1);
 
             int sum = (die1 + die2);
-
+            if (sum == 2) {
+                System.out.println(new StringBuilder().append("Sorry with a ").append(sum).append(" You lose all your points:(").toString());
+            } 
                 if (rolls % 2 == 0){
                 p2 += sum;}
                 else {
