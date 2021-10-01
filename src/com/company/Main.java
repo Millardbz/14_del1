@@ -46,7 +46,7 @@ public class Main {
             else {
                 int sum = (die1 + die2);
 
-                //det her skal rettes, så point
+                //det her skal rettes, så point står som nul med det samme
             if (sum == 2) {
                 System.out.println("Sorry with two ones you lose all your points:(");
                 if (rolls % 2 == 0){
