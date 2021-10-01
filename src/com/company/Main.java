@@ -74,7 +74,9 @@ public class Main {
                 else{
                     System.out.println("You now have " + p1 + " points");}
 
+
             }
         }
+
     }
 }
