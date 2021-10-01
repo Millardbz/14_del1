@@ -30,17 +30,17 @@ public class TestAfSum {
 
         }
 
-        System.out.println("Sum af 2: " + sum2);
-        System.out.println("Sum af 3: " + sum3);
-        System.out.println("Sum af 4: " + sum4);
-        System.out.println("Sum af 5: " + sum5);
-        System.out.println("Sum af 6: " + sum6);
-        System.out.println("Sum af 7: " + sum7);
-        System.out.println("Sum af 8: " + sum8);
-        System.out.println("Sum af 9: " + sum9);
-        System.out.println("Sum af 10: " + sum10);
-        System.out.println("Sum af 11: " + sum11);
-        System.out.println("Sum af 12: " + sum12);
+        System.out.println("Sum med 2: " + sum2);
+        System.out.println("Sum med 3: " + sum3);
+        System.out.println("Sum med 4: " + sum4);
+        System.out.println("Sum med 5: " + sum5);
+        System.out.println("Sum med 6: " + sum6);
+        System.out.println("Sum med 7: " + sum7);
+        System.out.println("Sum med 8: " + sum8);
+        System.out.println("Sum med 9: " + sum9);
+        System.out.println("Sum med 10: " + sum10);
+        System.out.println("Sum med 11: " + sum11);
+        System.out.println("Sum med 12: " + sum12);
 
 
 
